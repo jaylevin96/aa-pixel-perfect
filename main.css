@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+body {
+  background-image: url("images/kitchen.jpeg");
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#logo {
+  font-family: "Noto Sans SC", sans-serif;
+  color: white;
+  padding-left: 20px;
+  font-size: 18pt;
+  display: flex;
+  align-items: center;
+}
+#logo > img {
+  width: 60px;
+  height: 30px;
+  filter: brightness(10);
+  position: relative;
+  right: 15px;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 0.5fr 6fr 3fr;
+  height: 60px;
+}
+#inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#inputs > div > i {
+  border: 1pt solid red;
+  background-color: red;
+  color: white;
+  /* border-radius: 3px; */
+  /* border-end-end-radius: 3px; */
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  right: 10px;
+}
+.fa-magnifying-glass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#first-input {
+  position: relative;
+  padding-left: 10px;
+  left: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#second-input {
+  padding-left: 20px;
+}
+input {
+  height: 30px;
+  padding: 20px 0px;
+  width: 350px;
+  border-radius: 8px;
+  border-right: 1pt solid lightgray;
+  border-top: 0pt;
+  border-left: 0pt;
+  border-bottom: 0pt;
+}
+input:focus {
+  outline: 0pt;
+}
+
+/* .head > div {
+  border: 1pt solid red;
+} */
+
+.header-clickables {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  padding-right: 25px;
+}
+.header-clickables > button {
+  border-radius: 5px;
+  height: 40px;
+  padding: 10px 20px;
+  width: fit-content;
+  color: white;
+  font-weight: 800;
+  font-size: 1em;
+}
+.header-clickables > span {
+  padding: 10px;
+  border-radius: 5px;
+}
+.header-clickables > span:hover {
+  background-color: rgb(211, 211, 211, 0.5);
+}
+#log-in {
+  background-color: transparent;
+  border: 1.5pt solid white;
+
+  transition-property: background-color;
+  transition-duration: 0.75s;
+}
+#log-in:hover {
+  background-color: rgb(211, 211, 211, 0.5);
+}
+#sign-up {
+  background-color: red;
+  border: 1.5pt solid red;
+}
+#head_drop-downs {
+  position: absolute;
+  left: 320px;
+  display: flex;
+}
+#head_drop-downs > span {
+  padding: 15px 20px;
+  font-size: 0.8em;
+  color: white;
+  cursor: pointer;
+}
+#head_drop-downs > span:hover {
+  border-bottom: 3pt solid brown;
+}
