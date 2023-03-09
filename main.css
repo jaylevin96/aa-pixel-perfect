@@ -7,16 +7,37 @@ a {
   color: white;
 }
 body {
-  background-image: url("images/kitchen.jpeg");
-  /* background-position: center; */
+  background-image: url("images/new-kitchen.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.35);
+  animation-name: changeBackground;
+  animation-duration: 30s;
+  animation-delay: 5s;
+
+  /* animation-timing-function: steps(3); */
+  animation-iteration-count: infinite;
+  transition: none;
+}
+@keyframes changeBackground {
+  0% {
+    background-image: url("images/new-kitchen.jpg");
+  }
+  50% {
+    background-image: url("images/bathroom.jpeg");
+  }
+  100% {
+    background-image: url("images/yard.jpeg");
+  }
 }
 #logo {
   font-family: "Noto Sans SC", sans-serif;
   color: white;
   padding-left: 20px;
   font-size: 18pt;
+  font-weight: 100;
   display: flex;
   align-items: center;
 }
@@ -93,7 +114,8 @@ input:focus {
   font-weight: 500;
   padding-right: 25px;
 }
-.header-clickables > button {
+.header-clickables > button,
+#main-button {
   border-radius: 5px;
   height: 40px;
   padding: 10px 20px;
@@ -119,7 +141,8 @@ input:focus {
 #log-in:hover {
   background-color: rgb(211, 211, 211, 0.5);
 }
-#sign-up {
+#sign-up,
+#main-button {
   background-color: red;
   border: 1.5pt solid red;
 }
@@ -136,4 +159,107 @@ input:focus {
 }
 #head_drop-downs > span:hover {
   border-bottom: 3pt solid brown;
+}
+#restaurants:hover + #restaurants-drop-down {
+  display: grid;
+  position: absolute;
+  top: 55px;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 15px;
+}
+#homes:hover + #home-drop-down {
+  display: grid;
+  position: absolute;
+  top: 55px;
+  left: 123px;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 15px;
+}
+#autos:hover + #auto-drop-down {
+  display: grid;
+  position: absolute;
+  top: 55px;
+  left: 260px;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 15px;
+}
+#more:hover + #more-drop-down {
+  display: grid;
+  position: absolute;
+  top: 55px;
+  left: 393px;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 15px;
+}
+#head_drop-downs div {
+  display: none;
+  background-color: white;
+  padding: 10px;
+  width: max-content;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+#head_drop-downs div span {
+  font-weight: 200;
+}
+#main-button > i {
+  display: inline;
+}
+h2 {
+  font-family: "Noto Sans SC", sans-serif;
+  color: white;
+  position: relative;
+  font-size: 40pt;
+  font-weight: bolder;
+  top: 110px;
+  left: 400px;
+}
+h2::after {
+  content: "Get a deep clean";
+  animation-name: title-change;
+  animation-duration: 30s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+}
+#main-button {
+  font-weight: 200;
+  position: relative;
+  top: 80px;
+  left: 400px;
+  cursor: pointer;
+}
+#main-button::after {
+  content: " Cleaners";
+  animation-name: button-change;
+  animation-duration: 30s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes title-change {
+  0% {
+    content: "Get a deep clean";
+  }
+  50% {
+    content: "Leave it to the pros";
+  }
+  100% {
+    content: "Show off your lawn this spring";
+  }
+}
+@keyframes button-change {
+  0% {
+    content: " Cleaners";
+  }
+  50% {
+    content: " Handyman";
+  }
+  100% {
+    content: " Landscapers";
+  }
 }

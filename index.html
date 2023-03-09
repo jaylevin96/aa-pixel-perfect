@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2811e244da.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
     <title>myYelp</title>
@@ -32,16 +34,62 @@
             </div>
         </div>
         <div id="head_drop-downs">
-            <span>
+            <span id="restaurants">
                 Restaurants <i class="fa-solid fa-chevron-down"></i>
+
             </span>
-            <span>Home Service <i class="fa-solid fa-chevron-down"></i></span>
-            <span>Auto Services <i class="fa-solid fa-chevron-down"></i></span>
-            <span>More <i class="fa-solid fa-chevron-down"></i></span>
+            <div id="restaurants-drop-down">
+                <span><i class="fa-solid fa-motorcycle"></i> Delivery</span>
+                <span><i class="fa-regular fa-calendar"></i> Reservations</span>
+                <span> <i class="fa-solid fa-burger"></i> Burgers</span>
+                <span><i class="fa-solid fa-fish"></i> Japanese</span>
+                <span><i class="fa-solid fa-bowl-food"></i> Chinese</span>
+                <span><i class="fa-solid fa-shrimp"></i> Mexican</span>
+                <span><i class="fa-solid fa-martini-glass"></i> Italian</span>
+                <span> <i class="fa-solid fa-bowl-rice"></i> Thai</span>
+            </div>
+            <span id="homes">Home Service <i class="fa-solid fa-chevron-down"></i></span>
+            <div id="home-drop-down">
+                <span><i class="fa-solid fa-hammer"></i> Contractors</span>
+                <span><i class="fa-solid fa-mountain-sun"></i> Landscaping</span>
+                <span><i class="fa-solid fa-plug"></i> Electricians</span>
+                <span><i class="fa-solid fa-lock-open"></i> Locksmiths</span>
+                <span><i class="fa-solid fa-broom"></i> Home cleaners</span>
+                <span><i class="fa-solid fa-truck"></i> Movers</span>
+                <span><i class="fa-solid fa-wind"></i> HVAC</span>
+                <span><i class="fa-solid fa-toilet"></i> Plumbers</span>
+            </div>
+            <span id="autos">Auto Services <i class="fa-solid fa-chevron-down"></i></span>
+            <div id="auto-drop-down">
+                <span><i class="fa-solid fa-toolbox"></i> Auto Repair</span>
+                <span><i class="fa-solid fa-key"></i> Car Dealers</span>
+                <span> <i class="fa-solid fa-hands-bubbles"></i> Auto Detailing</span>
+                <span><i class="fa-solid fa-oil-well"></i> Oil Change</span>
+                <span><i class="fa-solid fa-car"></i> Body Shops</span>
+                <span><i class="fa-solid fa-square-parking"></i> Parking</span>
+                <span><i class="fa-solid fa-soap"></i>Car Wash</span>
+                <span><i class="fa-solid fa-truck-pickup"></i> Towing</span>
+            </div>
+            <span id="more">More <i class="fa-solid fa-chevron-down"></i></span>
+            <div id="more-drop-down">
+                <span><i class="fa-solid fa-spray-can-sparkles"></i> Dry Cleaning</span>
+                <span><i class="fa-solid fa-scissors"></i> Hair Salons</span>
+                <span><i class="fa-solid fa-phone"></i> Phone Repair</span>
+                <span><i class="fa-solid fa-dumbbell"></i> Gyms</span>
+                <span><i class="fa-solid fa-wine-glass"></i> Bars</span>
+                <span><i class="fa-solid fa-spa"></i> Massage</span>
+                <span><i class="fa-solid fa-champagne-glasses"></i> Nightlife</span>
+                <span><i class="fa-solid fa-basket-shopping"></i> Shopping</span>
+            </div>
         </div>
 
+
+
     </header>
-    <main></main>
+    <main>
+        <h2></h2>
+        <button id="main-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </main>
 
 
 </body>
