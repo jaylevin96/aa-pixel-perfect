@@ -151,7 +151,7 @@ input:focus {
 }
 #head_drop-downs {
   position: absolute;
-  left: 320px;
+  left: 350px;
   display: flex;
 }
 #head_drop-downs > span {
