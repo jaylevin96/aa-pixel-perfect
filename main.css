@@ -14,7 +14,7 @@ body {
   background-blend-mode: darken;
   background-color: rgba(0, 0, 0, 0.35);
   animation-name: changeBackground;
-  animation-duration: 30s;
+  animation-duration: 25s;
   animation-delay: 5s;
 
   /* animation-timing-function: steps(3); */
@@ -22,12 +22,15 @@ body {
   transition: none;
 }
 @keyframes changeBackground {
-  0% {
+  0%,
+  33% {
     background-image: url("images/new-kitchen.jpg");
   }
-  50% {
+  34%,
+  67% {
     background-image: url("images/bathroom.jpeg");
   }
+  68%,
   100% {
     background-image: url("images/yard.jpeg");
   }
@@ -152,7 +155,7 @@ input:focus {
   display: flex;
 }
 #head_drop-downs > span {
-  padding: 15px 20px;
+  padding: 0px 20px;
   font-size: 0.8em;
   color: white;
   cursor: pointer;
@@ -163,7 +166,7 @@ input:focus {
 #restaurants:hover + #restaurants-drop-down {
   display: grid;
   position: absolute;
-  top: 55px;
+  top: 20px;
   grid-template-columns: 1fr 1fr;
   row-gap: 10px;
   column-gap: 15px;
@@ -171,7 +174,7 @@ input:focus {
 #homes:hover + #home-drop-down {
   display: grid;
   position: absolute;
-  top: 55px;
+  top: 20px;
   left: 123px;
   grid-template-columns: 1fr 1fr;
   row-gap: 10px;
@@ -180,7 +183,7 @@ input:focus {
 #autos:hover + #auto-drop-down {
   display: grid;
   position: absolute;
-  top: 55px;
+  top: 20px;
   left: 260px;
   grid-template-columns: 1fr 1fr;
   row-gap: 10px;
@@ -189,7 +192,7 @@ input:focus {
 #more:hover + #more-drop-down {
   display: grid;
   position: absolute;
-  top: 55px;
+  top: 20px;
   left: 393px;
   grid-template-columns: 1fr 1fr;
   row-gap: 10px;
@@ -222,13 +225,14 @@ h2 {
 h2::after {
   content: "Get a deep clean";
   animation-name: title-change;
-  animation-duration: 30s;
+  animation-duration: 25s;
   animation-delay: 5s;
   animation-iteration-count: infinite;
 }
 #main-button {
   font-weight: 200;
   position: relative;
+  padding: 10px 25px;
   top: 80px;
   left: 400px;
   cursor: pointer;
@@ -236,30 +240,109 @@ h2::after {
 #main-button::after {
   content: " Cleaners";
   animation-name: button-change;
-  animation-duration: 30s;
+  animation-duration: 25s;
   animation-delay: 5s;
   animation-iteration-count: infinite;
 }
 
 @keyframes title-change {
-  0% {
+  0%,
+  33% {
     content: "Get a deep clean";
   }
-  50% {
+  34%,
+  67% {
     content: "Leave it to the pros";
   }
+  68%,
   100% {
     content: "Show off your lawn this spring";
   }
 }
 @keyframes button-change {
-  0% {
+  0%,
+  33% {
     content: " Cleaners";
   }
-  50% {
+  34%,
+  67% {
     content: " Handyman";
   }
+  68%,
   100% {
     content: " Landscapers";
   }
+}
+.bars {
+  border: 6px solid white;
+  border-color: rgb(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 40px 0px;
+  width: fit-content;
+}
+#barOne {
+  animation: bar-one;
+  animation-duration: 25s;
+  animation-delay: 5s;
+  animation-timing-function: steps();
+  animation-iteration-count: infinite;
+}
+@keyframes bar-one {
+  0% {
+    border-color: rgb(255, 255, 255, 0.4);
+  }
+  33% {
+    border-color: rgb(255, 255, 255, 1);
+  }
+  34%,
+  100% {
+    border-color: rgb(255, 255, 255, 1);
+  }
+}
+#barTwo {
+  animation: bar-two;
+  animation-duration: 25s;
+  animation-delay: 5s;
+
+  animation-iteration-count: infinite;
+}
+@keyframes bar-two {
+  0%,
+  33% {
+    border-color: rgb(255, 255, 255, 0.4);
+  }
+
+  67% {
+    border-color: rgb(255, 255, 255, 1);
+  }
+
+  100% {
+    border-color: rgb(255, 255, 255, 1);
+  }
+}
+#barThree {
+  animation: bar-three;
+  animation-duration: 25s;
+  animation-delay: 5s;
+
+  animation-iteration-count: infinite;
+}
+@keyframes bar-three {
+  0%,
+  67% {
+    border-color: rgb(255, 255, 255, 0.4);
+  }
+
+  100% {
+    border-color: rgb(255, 255, 255, 1);
+  }
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  position: absolute;
+  left: 350px;
+  top: 200px;
 }
