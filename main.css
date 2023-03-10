@@ -275,7 +275,7 @@ h2::after {
 }
 .bars {
   border: 6px solid white;
-  border-color: rgb(255, 255, 255, 0.4);
+  border-color: rgb(255, 255, 255, 0.3);
   border-radius: 10px;
   padding: 40px 0px;
   width: fit-content;
@@ -289,7 +289,7 @@ h2::after {
 }
 @keyframes bar-one {
   0% {
-    border-color: rgb(255, 255, 255, 0.4);
+    border-color: rgb(255, 255, 255, 0.3);
   }
   33% {
     border-color: rgb(255, 255, 255, 1);
@@ -309,7 +309,7 @@ h2::after {
 @keyframes bar-two {
   0%,
   33% {
-    border-color: rgb(255, 255, 255, 0.4);
+    border-color: rgb(255, 255, 255, 0.3);
   }
 
   67% {
@@ -330,7 +330,7 @@ h2::after {
 @keyframes bar-three {
   0%,
   67% {
-    border-color: rgb(255, 255, 255, 0.4);
+    border-color: rgb(255, 255, 255, 0.3);
   }
 
   100% {
